@@ -70,7 +70,6 @@ const DoubleLine = styled(Typography)`
 export const VideoCardTitle = styled(DoubleLine)(({ theme }) => ({
   letterSpacing: '0.4px',
   color: theme.palette.text.primary,
-  userSelect: 'none',
   marginBottom: 'auto',
 }));
 export const VideoCardName = styled(Typography)(({ theme }) => ({

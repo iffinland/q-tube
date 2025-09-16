@@ -7,10 +7,6 @@ import { SuperLike } from '../../../components/common/ContentButtons/SuperLike.t
 import FileElement from '../../../components/common/FileElement.tsx';
 import { titleFormatterOnSave } from '../../../constants/Misc.ts';
 import { ChannelActions } from './ChannelActions.tsx';
-import {
-  FileAttachmentContainer,
-  FileAttachmentFont,
-} from './VideoContent-styles.tsx';
 import { AddToBookmarks } from '../../../components/common/ContentButtons/AddToBookmarks.tsx';
 import { useTranslation } from 'react-i18next';
 

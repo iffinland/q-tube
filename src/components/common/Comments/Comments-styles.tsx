@@ -121,7 +121,6 @@ export const CreatedTextComment = styled(Typography)(({ theme }) => ({
   letterSpacing: '0.3px',
   fontWeight: 300,
   color: theme.palette.text.primary,
-  userSelect: 'none',
 }));
 
 export const IconsBox = styled(Box)({
