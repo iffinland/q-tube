@@ -17,7 +17,6 @@ export const VideoTitle = styled(Typography)(({ theme }) => ({
 export const VideoDescription = styled(Typography)(({ theme }) => ({
   fontSize: '16px',
   color: theme.palette.text.primary,
-  userSelect: 'none',
   wordBreak: 'break-word',
 }));
 
@@ -68,13 +67,4 @@ export const FileAttachmentContainer = styled(Box)(({ theme }) => ({
   padding: '5px 10px',
   border: `1px solid ${theme.palette.text.primary}`,
   width: '350px',
-}));
-
-export const FileAttachmentFont = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.primary,
-  fontSize: '20px',
-  letterSpacing: 0,
-  fontWeight: 400,
-  userSelect: 'none',
-  whiteSpace: 'nowrap',
 }));

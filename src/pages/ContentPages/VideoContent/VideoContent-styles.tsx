@@ -13,13 +13,8 @@ export const VideoPlayerContainer = styled(Box)(({ theme }) => ({}));
 export const VideoTitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.primary,
   wordBreak: 'break-word',
-}));
 
-export const VideoDescription = styled(Typography)(({ theme }) => ({
-  fontSize: '16px',
-  color: theme.palette.text.primary,
-  userSelect: 'none',
-  wordBreak: 'break-word',
+  userSelect: 'auto',
 }));
 
 export const Spacer = ({ height }: any) => {
@@ -39,14 +34,6 @@ export const StyledCardHeaderComment = styled(Box)({
   gap: '5px',
   padding: '7px 0px',
 });
-export const StyledCardCol = styled(Box)({
-  display: 'flex',
-  overflow: 'hidden',
-  flexDirection: 'column',
-  gap: '2px',
-  alignItems: 'flex-start',
-  width: '100%',
-});
 
 export const StyledCardColComment = styled(Box)({
   display: 'flex',
@@ -60,20 +47,3 @@ export const AuthorTextComment = styled(Typography)({
   fontSize: fontSizeMedium,
   lineHeight: '1.2',
 });
-
-export const FileAttachmentContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: '5px 10px',
-  border: `1px solid ${theme.palette.text.primary}`,
-  height: '50px',
-}));
-
-export const FileAttachmentFont = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.primary,
-  fontSize: '20px',
-  letterSpacing: 0,
-  fontWeight: 400,
-  userSelect: 'none',
-  whiteSpace: 'nowrap',
-}));
