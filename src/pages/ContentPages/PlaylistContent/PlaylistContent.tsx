@@ -169,8 +169,9 @@ export const PlaylistContent = () => {
                       playlistData={playlistData}
                       currentVideoIdentifier={videoData?.id}
                       onClick={(name, identifier) => {
+                        if (!channelName) return;
                         navigate(
-                          `/playlist/${channelName}/${id}/DOCUMENT/${name}/${identifier}`
+                          `/playlist/${encodeURIComponent(channelName)}/${id}/DOCUMENT/${encodeURIComponent(name)}/${identifier}`
                         );
                       }}
                       // sx={playlistsSX}
@@ -213,8 +214,9 @@ export const PlaylistContent = () => {
                     playlistData={playlistData}
                     currentVideoIdentifier={videoData?.id}
                     onClick={(name, identifier) => {
+                      if (!channelName) return;
                       navigate(
-                        `/playlist/${channelName}/${id}/DOCUMENT/${name}/${identifier}`
+                        `/playlist/${encodeURIComponent(channelName)}/${id}/DOCUMENT/${encodeURIComponent(name)}/${identifier}`
                       );
                     }}
                     // sx={playlistsSX}

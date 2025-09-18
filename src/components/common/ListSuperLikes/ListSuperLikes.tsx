@@ -74,7 +74,7 @@ export default function ListSuperLikes({ superlikes }) {
             const info =
               hashMapSuperlikes[superlike?.identifier]?.notificationInformation;
             forName = info?.name;
-            url = `/video/${info?.name}/${info?.identifier}`;
+            url = `/video/${encodeURIComponent(info?.name)}/${info?.identifier}`;
           }
 
           //  hasHash = true
@@ -121,7 +121,7 @@ export default function ListSuperLikes({ superlikes }) {
                 >
                   <Avatar
                     alt="Remy Sharp"
-                    src={`/arbitrary/THUMBNAIL/${superlike?.name}/qortal_avatar`}
+                    src={`/arbitrary/THUMBNAIL/${encodeURIComponent(superlike?.name)}/qortal_avatar`}
                   />
 
                   <ListItemText

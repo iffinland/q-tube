@@ -31,11 +31,11 @@ export const ChannelName = ({ channelName }: ChannelParams) => {
           minWidth: '125px',
         }}
         onClick={() => {
-          navigate(`/channel/${channelName}`);
+          navigate(`/channel/${encodeURIComponent(channelName)}`);
         }}
       >
         <Avatar
-          src={`/arbitrary/THUMBNAIL/${channelName}/qortal_avatar`}
+          src={`/arbitrary/THUMBNAIL/${encodeURIComponent(channelName)}/qortal_avatar`}
           alt={`${channelName}'s avatar`}
         />
         <AuthorTextComment
