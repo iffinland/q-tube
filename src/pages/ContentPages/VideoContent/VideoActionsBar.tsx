@@ -97,7 +97,11 @@ export const VideoActionsBar = ({
       >
         {videoData && (
           <>
-            <LikeAndDislike name={videoData?.user} identifier={videoData?.id} />
+            <LikeAndDislike
+              created={videoData?.created}
+              name={videoData?.user}
+              identifier={videoData?.id}
+            />
             <SuperLike
               numberOfSuperlikes={numberOfSuperlikes}
               totalAmount={calculateAmountSuperlike}

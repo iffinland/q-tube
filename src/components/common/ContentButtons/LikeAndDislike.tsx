@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import ThumbUpOffAltOutlinedIcon from '@mui/icons-material/ThumbUpOffAltOutlined';
 import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
 import { Box } from '@mui/material';
 import { objectToBase64 } from '../../../utils/PublishFormatter.ts';
-import { LIKE_BASE } from '../../../constants/Identifiers.ts';
+import {
+  LIKE_BASE,
+  trigger_like_identifier,
+} from '../../../constants/Identifiers.ts';
 import { CustomTooltip } from './CustomTooltip.tsx';
 import {
   formatLikeCount,
@@ -13,7 +16,7 @@ import {
   getCurrentLikeType,
   LikesAndDislikes,
 } from './LikeAndDislike-functions.ts';
-import { useAuth } from 'qapp-core';
+import { hashWordWithoutPublicSalt, useAuth } from 'qapp-core';
 import { useSetAtom } from 'jotai';
 import {
   AltertObject,
@@ -24,6 +27,7 @@ import { useTranslation } from 'react-i18next';
 interface LikeAndDislikeProps {
   name: string;
   identifier: string;
+  created: number;
 }
 export enum LikeType {
   Like = 1,
@@ -33,19 +37,46 @@ export enum LikeType {
 export const LIKE = LikeType.Like;
 export const DISLIKE = LikeType.Dislike;
 export const NEUTRAL = LikeType.Neutral;
-export const LikeAndDislike = ({ name, identifier }: LikeAndDislikeProps) => {
+export const LikeAndDislike = ({
+  name,
+  identifier,
+  created,
+}: LikeAndDislikeProps) => {
+  const [likeIdentifier, setLikeIdentifier] = useState<null | string>(null);
   const { t } = useTranslation(['core']);
 
   const { name: username } = useAuth();
   const [likeCount, setLikeCount] = useState<number>(0);
   const [dislikeCount, setDislikeCount] = useState<number>(0);
   const [currentLikeType, setCurrentLikeType] = useState<LikeType>(NEUTRAL);
-  const likeIdentifier = `${LIKE_BASE}${identifier.slice(0, 39)}`;
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const setNotification = useSetAtom(setNotificationAtom);
 
+  const createLikeIdentifier = useCallback(async (i, n, c) => {
+    try {
+      if (c < trigger_like_identifier) {
+        setLikeIdentifier(`${LIKE_BASE}${identifier.slice(0, 39)}`);
+        return;
+      } else {
+        const createdLikeIdentifier = await hashWordWithoutPublicSalt(
+          i + n,
+          20
+        );
+        setLikeIdentifier(createdLikeIdentifier);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
   useEffect(() => {
-    if (!username) return;
+    if (identifier && name && created) {
+      createLikeIdentifier(identifier, name, created);
+    }
+  }, [identifier, name, created]);
+
+  useEffect(() => {
+    if (!username || !likeIdentifier) return;
     type PromiseReturn = [LikeType, LikesAndDislikes | undefined];
 
     Promise.all([
@@ -58,7 +89,7 @@ export const LikeAndDislike = ({ name, identifier }: LikeAndDislikeProps) => {
       setDislikeCount(likesAndDislikes?.dislikes || 0);
       setIsLoading(false);
     });
-  }, [username]);
+  }, [username, likeIdentifier]);
 
   const updateLikeDataState = (newLikeType: LikeType) => {
     const setSuccessNotification = (msg: string) => {
@@ -100,6 +131,14 @@ export const LikeAndDislike = ({ name, identifier }: LikeAndDislikeProps) => {
       };
       setNotification(notificationObj);
 
+      return;
+    }
+    if (!likeIdentifier) {
+      const notificationObj: AltertObject = {
+        msg: 'Unable to construct like identifier',
+        alertType: 'error',
+      };
+      setNotification(notificationObj);
       return;
     }
     try {

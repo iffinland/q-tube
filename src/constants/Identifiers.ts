@@ -17,3 +17,7 @@ export const COMMENT_BASE = useTestIdentifiers
 export const FOR = useTestIdentifiers ? 'FORTEST5' : 'FOR096';
 export const FOR_SUPER_LIKE = useTestIdentifiers ? 'MYTEST_sl' : `qtube_sl`;
 export const FOR_LIKE = useTestIdentifiers ? 'MYTEST_like' : `qtube_like`;
+
+// updates trigger
+
+export const trigger_like_identifier = 1759360823338;
