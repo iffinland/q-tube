@@ -383,7 +383,7 @@ export const PublishVideo = ({
         listOfPublishes.push(requestBodyVideo);
         tempResourcesForList.push({
           qortalMetadata: {
-            identifier,
+            identifier: identifier + '_metadata',
             name: name,
             service: 'DOCUMENT',
             size: 1000,
