@@ -146,7 +146,7 @@ export const VideoListItem = ({
         <VideoCard
           onClick={() => {
             navigate(
-              `/playlist/${qortalMetadata?.name}/${qortalMetadata?.identifier}`
+              `/playlist/${encodeURIComponent(qortalMetadata?.name)}/${qortalMetadata?.identifier}`
             );
           }}
           sx={{
@@ -183,7 +183,9 @@ export const VideoListItem = ({
             <NameContainer
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`/channel/${qortalMetadata?.name}`);
+                navigate(
+                  `/channel/${encodeURIComponent(qortalMetadata?.name)}`
+                );
               }}
             >
               <Avatar
@@ -195,7 +197,7 @@ export const VideoListItem = ({
                     scale: 1.05,
                   },
                 }}
-                src={`/arbitrary/THUMBNAIL/${qortalMetadata?.name}/qortal_avatar`}
+                src={`/arbitrary/THUMBNAIL/${encodeURIComponent(qortalMetadata?.name)}/qortal_avatar`}
                 alt={`${qortalMetadata?.name}'s avatar`}
               />
               <VideoCardName
@@ -343,7 +345,7 @@ export const VideoListItem = ({
       <VideoCard
         onClick={() => {
           navigate(
-            `/video/${qortalMetadata?.name}/${qortalMetadata?.identifier}`
+            `/video/${encodeURIComponent(qortalMetadata?.name)}/${qortalMetadata?.identifier}`
           );
         }}
       >
@@ -392,11 +394,13 @@ export const VideoListItem = ({
                   scale: 1.05,
                 },
               }}
-              src={`/arbitrary/THUMBNAIL/${qortalMetadata?.name}/qortal_avatar`}
+              src={`/arbitrary/THUMBNAIL/${encodeURIComponent(qortalMetadata?.name)}/qortal_avatar`}
               alt={`${qortalMetadata?.name}'s avatar`}
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`/channel/${qortalMetadata?.name}`);
+                navigate(
+                  `/channel/${encodeURIComponent(qortalMetadata?.name)}`
+                );
               }}
             />
             <Tooltip
@@ -426,7 +430,9 @@ export const VideoListItem = ({
                   sx={{}}
                   onClick={(e) => {
                     e.stopPropagation();
-                    navigate(`/channel/${qortalMetadata?.name}`);
+                    navigate(
+                      `/channel/${encodeURIComponent(qortalMetadata?.name)}`
+                    );
                   }}
                 >
                   {qortalMetadata?.name}

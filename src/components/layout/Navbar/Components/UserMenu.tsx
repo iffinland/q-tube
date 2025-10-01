@@ -42,7 +42,7 @@ export const UserMenu = ({
   const handleMyChannelLink = useCallback(
     (switchToName: string) => {
       switchName(switchToName);
-      navigate(`/channel/${switchToName}`);
+      navigate(`/channel/${encodeURIComponent(switchToName)}`);
     },
     [navigate]
   );
