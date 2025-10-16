@@ -111,16 +111,16 @@
     "show_more": "näita rohkem",
     "show_less": "näita vähem",
     "copy_link_video": "kopeeri video link",
-    "subscribe_description": "Nime tellimine võimaldab sul näha selle sisu avalehe vahekaardil Tellimused. See EI laadi teie sõlme andmeid alla..",
-    "follow_description": "Following a name automatically downloads all of its content to your node. The more followers a name has, the faster its content will download for everyone.",
-    "currentSize": "{{followerName}}'s current download size: {{followingSize}}",
-    "itemCount": "number of files: {{followingItemCount}}"
+    "subscribe_description": "Nime tellimine võimaldab sul näha selle sisu sinu avalehel vahekaardil Tellimused. See EI laadi teie sõlme kõiki neid andmeid andmeid alla..",
+    "follow_description": "Nime jälgimine laadib automaatselt kogu jälgitava nime sisu sinu sõlme. Mida rohkem on nimel jälgijaid, seda kiiremini selle sisu kõigile alla laaditakse.",
+    "currentSize": "{{followerName}}'nime sisu praegune allalaadimise suurus: {{followingSize}}",
+    "itemCount": "failide arv: {{followingItemCount}}"
   },
   "payments": {
-    "amount": "amount"
+    "amount": "summa"
   },
   "comments": {
-    "comment_here": "comment here",
+    "comment_here": "kommenteeri siin",
     "load_more_comments": "laadi rohkem kommentaare",
     "submit_reply": "saadan vastuse",
     "hide_replies": "peida kõik vastused",
@@ -128,11 +128,11 @@
     "your_comment": "minu kommentaar"
   },
   "download": {
-    "ready": "ready to save: click here",
-    "start": "start download: click here"
+    "ready": "Salvestamiseks valmis: kliki siia",
+    "start": "alusta allalaadimist: kliki siia"
   },
   "index": {
-    "index_video": "indekseeri video"
+    "index_video": "indekseeri video otsingu jaoks"
   },
   "search": {
     "clear_search": "puhasta ajalugu"
