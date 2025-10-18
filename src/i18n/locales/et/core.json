@@ -2,139 +2,139 @@
   "action": {
     "back": "tagasi",
     "next": "järgmine",
-    "cancel": "tühistan",
-    "delete": "kustutan",
-    "close": "sulgen",
-    "save": "salvestan",
-    "subscribe": "Tellin kanali",
-    "unsubscribe": "Tühistan kanali tellimuse",
-    "follow": "jälgin",
-    "unfollow": "lõpeyan jälgimise",
-    "create": "loon",
-    "edit": "muudan",
-    "comment": "kommenteerin",
-    "reply": "vastan",
-    "bookmark_video": "lisan lemmikutesse video",
-    "bookmark_playlist": "lisan lemmikutesse esitlusloendi"
+    "cancel": "tühista",
+    "delete": "kustuta",
+    "close": "sulge",
+    "save": "salvesta",
+    "subscribe": "tellima",
+    "unsubscribe": "tühista tellimus",
+    "follow": "järgi",
+    "unfollow": "lõpeta jälgimine",
+    "create": "loo",
+    "edit": "muuda",
+    "comment": "kommenteeri",
+    "reply": "vasta",
+    "bookmark_video": "salvesta video",
+    "bookmark_playlist": "salvesta esitusloend"
   },
   "navbar": {
-    "search": "otsing"
+    "search": "otsi"
   },
   "publish": {
-    "publish_action": "AVALDAN",
+    "publish_action": "avalda",
     "video": "video",
-    "playlist": "esitlusloend",
-    "downloads": "allalaadimine",
-    "update_video": "uuendan video",
-    "publish_videos": "avaldan videos",
-    "populate_titles": "Täida pealkirjad failinime järgi (kui failid on valitud)",
+    "playlist": "esitusloend",
+    "downloads": "allalaadimised",
+    "update_video": "uuenda videot",
+    "publish_videos": "avaldada videod",
+    "populate_titles": "Täida pealkirjad failinimede järgi (kui failid on valitud)",
     "same_cover_images": "Kõik videod kasutavad sama kaanepilti",
-    "populate_description": "Täida kõik kirjeldused pealkirja järgi",
-    "drag_drop_videos": "Lohistage videofailid siia või klõpsake failide valimiseks",
-    "supported_containers": "Toetatud failikonteinerid",
-    "audio_codecs": "audio koodeksid",
-    "video_codecs": "video koodeksid",
+    "populate_description": "Täida kõik kirjeldused pealkirja põhjal",
+    "drag_drop_videos": "Lohista videofailid siia või klõpsa, et need valida",
+    "supported_containers": "Toetatud failivormingud",
+    "audio_codecs": "helikoodekid",
+    "video_codecs": "videokoodekid",
     "select_category": "Vali kategooria",
     "select_subcategory": "Vali alamkategooria",
     "add_cover_image": "lisa kaanepilt",
     "description_video": "video kirjeldus",
-    "add_vids_playlist": "Kas soovite need videod esitusloendisse lisada?",
-    "add_vids_playlist_optional": "lisa esitlusloendit (pole kohustuslik)",
-    "no_playlist": "ilma esitlusloendita",
-    "new_playlist": "uus esitlusloend",
-    "existing_playlist": "olemas olevad esitlusloenditd",
-    "select_existing_playlist": "vali varem loodud esitlusnimekiri",
+    "add_vids_playlist": "Kas soovid need videod lisada esitusloendisse?",
+    "add_vids_playlist_optional": "esitusloendisse lisamine on VALIKULINE",
+    "no_playlist": "pole esitusloendit",
+    "new_playlist": "uus esitusloend",
+    "existing_playlist": "olemasolev esitusloend",
+    "select_existing_playlist": "vali olemasolev esitusloend",
     "playlist_search_by_title": "otsi pealkirja järgi",
-    "title_playlist": "esitlusloendit pealkiri",
-    "description_playlist": "esitlusloendit pealkiri",
-    "generationg_extracts": "pildiekstraktide genereerimine",
-    "create_new_playlist": "loo uus esitlusnimekiri",
-    "update_playlist_properties": "esitusloendi omaduste värskendamine",
-    "add_videos_playlist": "lisa video esitlusloendit",
+    "title_playlist": "esitusloendi pealkiri",
+    "description_playlist": "esitusloendi kirjeldus",
+    "generationg_extracts": "luuakse pildikatkeid",
+    "create_new_playlist": "loo uus esitusloend",
+    "update_playlist_properties": "uuenda esitusloendi omadusi",
+    "add_videos_playlist": "lisa videod esitusloendisse",
     "my_videos": "minu videod",
     "all_videos": "kõik videod",
     "search_by_title": "otsi pealkirja järgi",
-    "edit_playlist": "muuda esitlusloendit",
+    "edit_playlist": "muuda esitusloendit",
     "block_user_content": "blokeeri kasutaja sisu",
-    "edit_video": "edit video properties",
-    "delete_video": "KUSTUTA VIFEO",
-    "remove_video_list": "eemalda video esitlusloendist",
-    "playlist_not_exist": "sellist esitlusloendit ei ole"
+    "edit_video": "muuda video omadusi",
+    "delete_video": "kustuta video",
+    "remove_video_list": "eemalda video nimekirjast",
+    "playlist_not_exist": "seda esitusloendit ei eksisteeri"
   },
   "notification": {
-    "no_new_notification": "uued teavitused puuduvad",
-    "from_user": "from {{user}}"
+    "no_new_notification": "uusi teavitusi pole",
+    "from_user": "kasutajalt {{user}}"
   },
   "likes": {
-    "super_like": "super meeldimine",
+    "super_like": "supermeeldimine",
     "recent_super_likes": "hiljutised supermeeldimised",
-    "like_dislike": "Video meeldimine või mittemeeldimine"
+    "like_dislike": "Meeldi või ei meeldi video"
   },
   "blocked": {
     "blocked_names": "blokeeritud nimed"
   },
   "sidenav": {
-    "home": "kodu",
+    "home": "avaleht",
     "subscriptions": "tellimused",
     "watched_videos": "vaadatud videod",
-    "bookmarks": "lemmikud",
-    "your_playlists": "minu esitlusloendid",
-    "your_videos": "minu videod"
+    "bookmarks": "järjehoidjad",
+    "your_playlists": "sinu esitusloendid",
+    "your_videos": "sinu videod"
   },
   "filters": {
-    "most_recent": "kõige uuem",
+    "most_recent": "uusimad",
     "all": "kõik",
     "videos": "videod",
-    "playlists": "esitlusloendid",
-    "more_filters": "rohkem valikuid",
-    "more": "rohkem",
-    "user_name": "Kasutaja nimi (täpne)",
+    "playlists": "esitusloendid",
+    "more_filters": "rohkem filtreid",
+    "more": "veel",
+    "user_name": "Kasutajanimi (täpne)",
     "category": "kategooria",
-    "sub_category": "alamkategooriad",
-    "reset": "Nulli",
+    "sub_category": "alamkategooria",
+    "reset": "lähtesta",
     "filters": "filtrid"
   },
   "lists": {
-    "no_results": "tulemused puuduvad"
+    "no_results": "tulemusi pole"
   },
   "bookmarks": {
-    "select_list": "vali kõik esitlusloendid",
-    "all_bookmarks": "kõik lemmik videod",
-    "bookmark_list": "lemmikute loetelu",
-    "bookmark_lists": "lemmikute loetelud",
-    "no_bookmarks_lists": "lemmik loetelud puuduvad",
-    "new_list": "uus loetelu",
-    "new_folder": "uus kataloog",
-    "delete_folder": "kustuta kataloog"
+    "select_list": "vali nimekiri",
+    "all_bookmarks": "kõik salvestatud videod",
+    "bookmark_list": "järjehoidjate nimekiri",
+    "bookmark_lists": "järjehoidjate nimekirjad",
+    "no_bookmarks_lists": "järjehoidjate nimekirju pole",
+    "new_list": "uus nimekiri",
+    "new_folder": "uus kaust",
+    "delete_folder": "kustuta kaust"
   },
   "video": {
     "show_more": "näita rohkem",
     "show_less": "näita vähem",
     "copy_link_video": "kopeeri video link",
-    "subscribe_description": "Nime tellimine võimaldab sul näha selle sisu sinu avalehel vahekaardil Tellimused. See EI laadi teie sõlme kõiki neid andmeid andmeid alla..",
-    "follow_description": "Nime jälgimine laadib automaatselt kogu jälgitava nime sisu sinu sõlme. Mida rohkem on nimel jälgijaid, seda kiiremini selle sisu kõigile alla laaditakse.",
-    "currentSize": "{{followerName}}'nime sisu praegune allalaadimise suurus: {{followingSize}}",
+    "subscribe_description": "Kasutaja tellimine võimaldab sul näha tema sisu avalehe Tellimuste vahekaardil. See EI laadi midagi alla sinu seadmesse.",
+    "follow_description": "Kasutaja jälgimine laadib automaatselt alla kogu tema sisu sinu sõlme. Mida rohkem jälgijaid kasutajal on, seda kiiremini tema sisu kõigile kättesaadavaks muutub.",
+    "currentSize": "{{followerName}} praegune allalaadimismaht: {{followingSize}}",
     "itemCount": "failide arv: {{followingItemCount}}"
   },
   "payments": {
     "amount": "summa"
   },
   "comments": {
-    "comment_here": "kommenteeri siin",
+    "comment_here": "kirjuta kommentaar siia",
     "load_more_comments": "laadi rohkem kommentaare",
-    "submit_reply": "saadan vastuse",
+    "submit_reply": "saada vastus",
     "hide_replies": "peida kõik vastused",
     "view_replies": "vaata kõiki vastuseid",
-    "your_comment": "minu kommentaar"
+    "your_comment": "sinu kommentaar"
   },
   "download": {
-    "ready": "Salvestamiseks valmis: kliki siia",
-    "start": "alusta allalaadimist: kliki siia"
+    "ready": "valmis salvestamiseks: klõpsa siia",
+    "start": "alusta allalaadimist: klõpsa siia"
   },
   "index": {
-    "index_video": "indekseeri video otsingu jaoks"
+    "index_video": "video register"
   },
   "search": {
-    "clear_search": "puhasta ajalugu"
+    "clear_search": "tühjenda otsinguajalugu"
   }
 }
